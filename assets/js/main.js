@@ -3,6 +3,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+let prevhash = '';
 
 (function($) {
 
@@ -295,7 +296,7 @@
 					$('<div class="close">Close</div>')
 						.appendTo($this)
 						.on('click', function() {
-							location.hash = '';
+							location.hash = prevhash;
 						});
 
 				// Prevent clicks from inside article from bubbling.
@@ -307,7 +308,6 @@
 
 		// Events.
 			$body.on('click', function(event) {
-
 				// Article visible? Hide.
 					if ($body.hasClass('is-article-visible'))
 						$main._hide(true);
