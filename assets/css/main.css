@@ -47,8 +47,10 @@ blockquote, q {
 	}
 
 table {
-	border-collapse: collapse;
+	border-collapse: separate !important;
 	border-spacing: 0;
+	border:solid white 1px;
+	border-radius:10px;
 }
 
 body {
